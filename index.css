@@ -1,0 +1,70 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 12px 24px;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+.itens {
+  display: flex;
+  gap: 20px;
+}
+
+.presenteImg {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.active {
+  color: red !important;
+}
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerModal {
+  width: 200px;
+  height: 300px;
+  background: white;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.closeModal {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
