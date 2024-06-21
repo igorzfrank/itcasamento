@@ -507,4 +507,12 @@
     flex-wrap: wrap;
     /* gap: 30px; */
   }
+
+  .local {
+    padding: 0px 20px;
+  }
+
+  .local .container {
+    padding: 60px 20px;
+  }
 }
