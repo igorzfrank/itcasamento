@@ -1,22 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IT Casamento - Presença</title>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body class="presenca">
     <div class="container">
-        <h1>Confirme sua Presença</h1>
-        <form action="https://formsubmit.co/igor.frankz@gmail.com" method="POST">
-            <input type="hidden" name="_next" value="http://127.0.0.1:5500/itcasamento/index.html">
-            <input type="hidden" name="_captcha" value="false">
-            <label for="name"></label>
-            <input type="text" name="name" required>
-            <button type="submit">Confirmar</button>
-       </form>
-       <a href="index.html" class="btn">Voltar</a>
+      <div class="header">
+        <h1>Confirme a sua Presença</h1>
+      </div>
+      <div class="content">
+        <p>
+          Confirme a sua presença e dos seus familiares, envie apenas um nome
+          por vez!
+        </p>
+      </div>
+      <form action="https://formsubmit.co/igor.frankz@gmail.com" method="POST">
+        <input
+          type="hidden"
+          name="_next"
+          value="http://127.0.0.1:5500/itcasamento/index.html"
+        />
+        <input type="hidden" name="_captcha" value="false" />
+        <label for="name"></label>
+        <input type="text" name="name" required />
+        <button type="submit">Confirmar</button>
+      </form>
+      <a href="index.html" class="btn">Voltar</a>
     </div>
-</body>
+  </body>
 </html>

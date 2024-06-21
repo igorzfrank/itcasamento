@@ -1,30 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Forum&family=Libre+Caslon+Display&family=Tangerine:wght@400;700&display=swap");
+
+:root {
+  --c1: #375520;
+  --c2: #4e6a39;
+  --c3: #839774;
+  --c4: #abbe9d;
+  --c5: #d0dec5;
+  --b1: #000000;
+  --w1: #ffffff;
+}
+
+/* Geral  */
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  transition: all 0.3s;
 }
 
-body {
+/* INDEX */
+
+.index {
+  background: url(./imgs/bkg-01.jpg) no-repeat center center / cover;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
 }
 
-.container {
+.index .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 32px;
+  background: rgba(255, 255, 255, 0.75);
+  padding: 60px 40px;
+  position: relative;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-.btn {
+.index .container .header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.index .container .header h1 {
+  font-family: "Libre Caslon Display", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 72px;
+  margin-bottom: -10px;
+  color: var(--c1);
+}
+
+.index .container .header h2 {
+  font-size: 36px;
+  color: var(--c4);
+  font-family: "Tangerine", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.index .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.index .content p {
+  font-size: 24px;
+  font-family: "Libre Caslon Display", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--c1);
+}
+
+.index .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.index .btn {
   text-decoration: none;
-  padding: 12px 24px;
-  background: black;
+  font-size: 38px;
+  padding: 8px 48px;
   color: white;
   cursor: pointer;
+  color: var(--c3);
+  font-family: "Tangerine", cursive;
+  font-weight: 400;
+  font-style: normal;
+  border: 1px solid var(--c5);
+  border-radius: 40px;
+}
+
+.index .btn:hover {
+  color: var(--c2);
+  border: 1px solid var(--c4);
+}
+
+/* PRESENÇA */
+
+.presenca {
+  background: url(./imgs/bkg-01.jpg) no-repeat center center / cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.presenca .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 420px;
+  gap: 32px;
+  background: rgba(255, 255, 255, 0.75);
+  padding: 60px 40px;
+  position: relative;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.presenca .container .header h1 {
+  font-family: "Libre Caslon Display", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 62px;
+  color: var(--c1);
+  text-align: center;
+  line-height: 62px;
+}
+
+.presenca .container .content p {
+  font-size: 24px;
+  font-family: "Libre Caslon Display", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--c1);
+}
+
+.presenca form {
+  width: 100%;
+  position: relative;
+}
+
+.presenca input {
+  font-size: 24px;
+  width: 100%;
+  padding: 8px 24px;
+  border: 1px solid var(--c4);
+  border-radius: 30px;
+  font-family: "Libre Caslon Display", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--c1);
+}
+
+.presenca form button {
+  position: absolute;
+  right: 0px;
+  height: 100%;
+  font-size: 24px;
+  font-family: "Tangerine", cursive;
+  font-weight: 400;
+  font-style: normal;
+  background: var(--c3);
+  color: var(--c5);
+  padding: 0px 24px 0px 12px;
+  border-radius: 0px 30px 30px 0px;
+  cursor: pointer;
+  border: none;
+}
+
+.presenca form button:hover {
+  color: var(--b1);
+  /* background: var(--c2); */
+}
+
+.presenca .btn {
+  text-decoration: none;
+  font-size: 38px;
+  padding: 8px 48px;
+  color: white;
+  cursor: pointer;
+  color: var(--c3);
+  font-family: "Tangerine", cursive;
+  font-weight: 400;
+  font-style: normal;
+  border: 1px solid var(--c5);
+  border-radius: 40px;
+}
+
+.presenca .btn:hover {
+  color: var(--c2);
+  border: 1px solid var(--c4);
 }
 
 .itens {
@@ -67,4 +245,111 @@ body {
   position: fixed;
   top: 20px;
   right: 20px;
+}
+
+/* Localização */
+
+.local {
+  background: url(./imgs/bkg-01.jpg) no-repeat center center / cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.local .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 420px;
+  gap: 32px;
+  background: rgba(255, 255, 255, 0.75);
+  padding: 60px 40px;
+  position: relative;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.local .container .header h1 {
+  font-family: "Libre Caslon Display", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 46px;
+  color: var(--c1);
+}
+
+.local .container .content p {
+  font-size: 16px;
+  font-family: "Libre Caslon Display", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--c1);
+}
+
+.local .container iframe {
+  width: 100%;
+  height: 300px;
+}
+
+.local .btn {
+  text-decoration: none;
+  font-size: 38px;
+  padding: 8px 48px;
+  color: white;
+  cursor: pointer;
+  color: var(--c3);
+  font-family: "Tangerine", cursive;
+  font-weight: 400;
+  font-style: normal;
+  border: 1px solid var(--c5);
+  border-radius: 40px;
+}
+
+.local .btn:hover {
+  color: var(--c2);
+  border: 1px solid var(--c4);
+}
+
+@media (max-width: 580px) {
+  .index {
+    padding: 0px 20px;
+  }
+
+  .index .container {
+    padding: 60px 40px;
+  }
+
+  .index .container .header h1 {
+    font-size: 56px;
+    margin-bottom: -10px;
+  }
+
+  .index .container .header h2 {
+    font-size: 28px;
+  }
+
+  .index .btn {
+    font-size: 28px;
+  }
+
+  .presenca {
+    padding: 0px 20px;
+  }
+
+  .presenca .container {
+    padding: 60px 40px;
+  }
+
+  .presenca .container .header h1 {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .presenca .container .header h2 {
+    font-size: 28px;
+  }
+
+  .presenca .btn {
+    font-size: 28px;
+  }
 }
