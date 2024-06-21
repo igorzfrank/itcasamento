@@ -15,9 +15,9 @@ $(".choice").on("click", function () {
   $(closeModal).text("X").addClass("closeModal");
   $(imgModal).attr("src", $(img).attr("src"));
   $(titleModal).text(`${title.text()}`);
-  $(valorModal).text(`${value.text()}`);
+  $(valorModal).text(`R$: ${value.text()},00`);
   $(qrCode).attr("src", `./imgs/img-pix-${value.text()}.png`);
-  $(copyButton).text("Copiar Chave").addClass("copyButton");
+  $(copyButton).text("Copiar Chave Aleatória - PIX").addClass("copyButton");
   $(containerModal).addClass("containerModal");
   $(modal).addClass("modal").append(closeModal).append(containerModal);
 
