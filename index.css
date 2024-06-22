@@ -220,10 +220,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 420px;
+  max-width: 440px;
+  height: 80vh;
   gap: 32px;
   background: rgba(255, 255, 255, 0.75);
-  padding: 60px 40px;
+  padding: 60px 20px;
   position: relative;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
@@ -239,11 +240,16 @@
 }
 
 .presentes .container .itens {
+  overflow-y: scroll;
+}
+
+.presentes .container .itens .scroll-itens {
   display: flex;
   flex-direction: row;
-  align-items: start;
-  justify-content: space-between;
-  gap: 12px;
+  align-items: flex-start;
+  /* justify-content: space-between; */
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .presentes .container .itens .box {
