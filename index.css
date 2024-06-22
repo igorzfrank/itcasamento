@@ -31,6 +31,7 @@
 }
 
 .index .container {
+  max-width: 460px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,6 +41,20 @@
   padding: 60px 40px;
   position: relative;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.index .container::after {
+  content: '';
+  background: url(./imgs/polaroid.png) no-repeat center center;
+  background-size: contain;
+  width: 100px;
+  height: 120px;
+  position: absolute;
+  right: -40px;
+  bottom: -20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  transform: rotate(20deg);
 }
 
 .index .container .header {
@@ -58,7 +73,7 @@
   color: var(--c1);
 }
 
-.index .container .header h2 {
+.index .container h2 {
   font-size: 36px;
   color: var(--c4);
   font-family: "Tangerine", cursive;
@@ -70,16 +85,28 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .index .content p {
   font-size: 24px;
+  line-height: 1;
   font-family: "Libre Caslon Display", serif;
   font-weight: 400;
   font-style: normal;
   color: var(--c1);
 }
 
+.index .footer {
+  font-size: 22px;
+  text-align: center;
+  line-height: 24px;
+}
+
+.index .footer span {
+  font-size: 18px;
+  color: var(--c2);
+}
 .index .buttons {
   display: flex;
   align-items: center;
@@ -91,7 +118,7 @@
 .index .btn {
   text-decoration: none;
   font-size: 38px;
-  padding: 8px 48px;
+  padding: 8px 48px 4px 48px;
   color: white;
   cursor: pointer;
   color: var(--c3);
@@ -134,10 +161,10 @@
   font-family: "Libre Caslon Display", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 62px;
+  font-size: 56px;
   color: var(--c1);
   text-align: center;
-  line-height: 62px;
+  line-height: 56px;
 }
 
 .presenca .container .content p {
@@ -189,7 +216,7 @@
 .presenca .btn {
   text-decoration: none;
   font-size: 38px;
-  padding: 8px 48px;
+  padding: 8px 48px 4px 48px;
   color: white;
   cursor: pointer;
   color: var(--c3);
@@ -413,7 +440,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 420px;
+  max-width: 460px;
   gap: 32px;
   background: rgba(255, 255, 255, 0.75);
   padding: 60px 40px;
@@ -442,6 +469,10 @@
   height: 300px;
 }
 
+.local .content {
+  width: 100%;
+}
+
 .local .btn {
   text-decoration: none;
   font-size: 38px;
@@ -466,8 +497,24 @@
     padding: 0px 20px;
   }
 
-  .index .container {
-    padding: 60px 40px;
+  .container {
+    padding: 60px 30px !important;
+  }
+
+  .index .container::after {
+    content: '';
+    background: url(./imgs/polaroid.png) no-repeat center center;
+    background-size: contain;
+    width: 60px;
+    height: 70px;
+    position: absolute;
+    left: 90%;
+    top: 0px;
+    right: unset;
+    bottom: unset;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    transform: rotate(20deg) translate(-50%);
   }
 
   .index .container .header h1 {
@@ -477,6 +524,16 @@
 
   .index .container .header h2 {
     font-size: 28px;
+  }
+
+  .index .content p {
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  .index .footer {
+    font-size: 18px !important;
+    line-height: 1;
   }
 
   .index .btn {
@@ -492,12 +549,13 @@
   }
 
   .presenca .container .header h1 {
-    font-size: 36px;
-    line-height: 36px;
+    font-size: 28px;
+    line-height: 1;
   }
 
-  .presenca .container .header h2 {
-    font-size: 28px;
+  .presenca .container .content p {
+    font-size: 18px;
+    line-height: 1;
   }
 
   .presenca .btn {
@@ -515,7 +573,8 @@
   }
 
   .local {
-    padding: 0px 20px;
+    padding: 60px 20px;
+    height: auto;
   }
 
   .local .container {
