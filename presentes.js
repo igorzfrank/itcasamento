@@ -11,6 +11,9 @@ $(".choice").on("click", function () {
   var valorModal = document.createElement("h4");
   var qrCode = document.createElement("img");
   var copyButton = document.createElement("button");
+  var cpfPix = document.createElement("p");
+  var nomePix = document.createElement("p");
+  var bancoPix = document.createElement("p");
 
   $(closeModal).text("X").addClass("closeModal");
   $(imgModal).attr("src", $(img).attr("src"));
@@ -20,13 +23,18 @@ $(".choice").on("click", function () {
   $(copyButton).text("Copiar Chave PIX").addClass("copyButton");
   $(containerModal).addClass("containerModal");
   $(modal).addClass("modal").append(closeModal).append(containerModal);
-
+  $(cpfPix).text("PIX: 077.024.419-09");
+  $(nomePix).text("Igor Frank Moreno");
+  $(bancoPix).text("Banco Inter");
   $(containerModal)
     .append(imgModal)
     .append(titleModal)
     .append(valorModal)
     .append(qrCode)
-    .append(copyButton);
+    .append(copyButton)
+    .append(chavePix)
+    .append(nomePix)
+    .append(bancoPix);
 
   console.log(value.text());
   $("body").append(modal);
@@ -38,7 +46,6 @@ $(".choice").on("click", function () {
   $(".copyButton").on("click", function () {
     let chavePix = `07702441909`;
 
-    // 00020101021126460014br.gov.bcb.pix0111077024419090209Presente Casamento520400005303986540650.005802BR5917IGOR FRANK MORENO6008SAO JOSE62070503***6304A2A8
     navigator.clipboard
       .writeText(chavePix)
       .then(() => {
