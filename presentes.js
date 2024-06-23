@@ -36,17 +36,15 @@ $(".choice").on("click", function () {
   });
 
   $(".copyButton").on("click", function () {
-    if (value.text() == "50") {
-      let chavePix =
-        "00020101021126460014br.gov.bcb.pix0111077024419090209Presente Casamento520400005303986540650.005802BR5917IGOR FRANK MORENO6008SAO JOSE62070503***6304A2A8";
-      navigator.clipboard
-        .writeText(chavePix)
-        .then(() => {
-          console.log("Chave PIX copiada para a área de transferência");
-        })
-        .catch((err) => {
-          console.error("Erro ao copiar a chave PIX: ", err);
-        });
-    }
+    let chavePix = `00020101021126460014br.gov.bcb.pix0111077024419090209Presente Casamento5204000053039865406${value.text()}.005802BR5917IGOR FRANK MORENO6008SAO JOSE62070503***6304A2A8`;
+    // 00020101021126460014br.gov.bcb.pix0111077024419090209Presente Casamento520400005303986540650.005802BR5917IGOR FRANK MORENO6008SAO JOSE62070503***6304A2A8
+    navigator.clipboard
+      .writeText(chavePix)
+      .then(() => {
+        console.log("Chave PIX copiada para a área de transferência");
+      })
+      .catch((err) => {
+        console.error("Erro ao copiar a chave PIX: ", err);
+      });
   });
 });
