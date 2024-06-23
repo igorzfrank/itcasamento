@@ -32,7 +32,7 @@ $(".choice").on("click", function () {
     .append(valorModal)
     .append(qrCode)
     .append(copyButton)
-    .append(chavePix)
+    .append(cpfPix)
     .append(nomePix)
     .append(bancoPix);
 
