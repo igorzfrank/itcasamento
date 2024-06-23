@@ -17,7 +17,7 @@ $(".choice").on("click", function () {
   $(titleModal).text(`${title.text()}`);
   $(valorModal).text(`R$: ${value.text()},00`);
   $(qrCode).attr("src", `./imgs/img-pix-${value.text()}.png`);
-  $(copyButton).text("Copiar Chave Aleatória - PIX").addClass("copyButton");
+  $(copyButton).text("Copiar Chave PIX").addClass("copyButton");
   $(containerModal).addClass("containerModal");
   $(modal).addClass("modal").append(closeModal).append(containerModal);
 
@@ -36,7 +36,7 @@ $(".choice").on("click", function () {
   });
 
   $(".copyButton").on("click", function () {
-    let chavePix = `00020101021126330014br.gov.bcb.pix0111077024419095204000053039865406${value.text()}.005802BR5917IGOR FRANK MORENO6008SAO JOSE62070503***6304E99E`;
+    let chavePix = `07702441909`;
 
     // 00020101021126460014br.gov.bcb.pix0111077024419090209Presente Casamento520400005303986540650.005802BR5917IGOR FRANK MORENO6008SAO JOSE62070503***6304A2A8
     navigator.clipboard
