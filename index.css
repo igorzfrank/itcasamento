@@ -348,10 +348,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px 0px;
 }
 
 .containerModal {
-  max-width: 280px;
+  max-width: 200px;
+  width: 100%;
+  height: auto;
   background: var(--c5);
   display: flex;
   align-content: center;
@@ -381,6 +384,14 @@
   font-family: "Tangerine", cursive;
   font-weight: 400;
   font-style: normal;
+  text-align: center;
+}
+
+.modal .containerModal p {
+  font-family: "Libre Caslon Display", serif;
+  font-size: 16px;
+  line-height: .8;
+  color: var(--c1);
   text-align: center;
 }
 
@@ -575,14 +586,16 @@
     font-size: 28px;
   }
 
+  .presentes {
+    padding: 60px 20px;
+    height: auto;
+  }
+
   .presentes .container {
     padding: 20px;
     /* width: 300px; */
   }
 
-  .presentes {
-    padding: 0px 20px;
-  }
 
   .presentes .container .itens .scroll-itens {
     justify-content: center;
